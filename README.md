@@ -1,1 +1,2 @@
-# JS-Blog-Web-Practice
+
+While creating this personal blog website, I focused primarily on practicing JavaScript and demonstrating my skills as a beginner front-end developer. The design was not the main emphasis; instead, my goal was to implement key JavaScript functionalities like form handling, event listeners, and local storage to manage and display blog posts. Using Bootstrap for layout and styling, I aimed for a simple, user-friendly interface that allowed me to experiment with core front-end concepts. This project represents my journey in learning JavaScript, offering a glimpse into my growing skills and enthusiasm for front-end development.
