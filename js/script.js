@@ -8,7 +8,41 @@ let postText = document.getElementById("text");
 let blogContainer = document.getElementById("blogs-container");
 
 // Array to hold blog post data
-let PostsArray = [];
+let PostsArray = [
+    { title: 'Web Dev Basics', text: 'Introduction to HTML, CSS, and JavaScript', category: 'Web-Development' },
+    { title: 'JavaScript Frameworks', text: 'Exploring popular frameworks like React and Angular', category: 'Web-Development' },
+    { title: 'Backend Technologies', text: 'Introduction to Node.js and Express', category: 'Web-Development' },
+
+    // Graphic Designing
+    { title: 'Graphic Design Fundamentals', text: 'Understanding color theory and typography', category: 'Graphic-Designing' },
+    { title: 'Tools for Graphic Design', text: 'Exploring Adobe Photoshop and Illustrator', category: 'Graphic-Designing' },
+    { title: 'Branding and Identity', text: 'Creating a strong brand identity', category: 'Graphic-Designing' },
+
+    // SEO (Search Engine Optimization)
+    { title: 'SEO Basics', text: 'Understanding keywords and metadata', category: 'SEO' },
+    { title: 'Link Building Strategies', text: 'How to build backlinks effectively', category: 'SEO' },
+    { title: 'Content SEO', text: 'Optimizing content for search engines', category: 'SEO' },
+
+    // SMM (Social Media Marketing)
+    { title: 'SMM Overview', text: 'Introduction to social media platforms', category: 'SMM' },
+    { title: 'Engagement Techniques', text: 'Tips for increasing social media engagement', category: 'SMM' },
+    { title: 'Social Media Campaigns', text: 'Planning and executing successful campaigns', category: 'SMM' },
+
+    // AI (Artificial Intelligence)
+    { title: 'AI Basics', text: 'Introduction to machine learning and deep learning', category: 'AI' },
+    { title: 'AI in Everyday Life', text: 'How AI is transforming industries', category: 'AI' },
+    { title: 'Ethics in AI', text: 'Exploring the ethical implications of AI', category: 'AI' },
+
+    // Content Writing
+    { title: 'Content Writing Tips', text: 'How to create engaging and effective content', category: 'Content-Writing' },
+    { title: 'SEO for Content Writers', text: 'How to optimize content for search engines', category: 'Content-Writing' },
+    { title: 'Creating Compelling Headlines', text: 'Tips for crafting attention-grabbing headlines', category: 'Content-Writing' },
+
+    // Web Designing
+    { title: 'Web Design Fundamentals', text: 'Principles of good web design', category: 'Web-Designing' },
+    { title: 'User Experience (UX)', text: 'Designing with the user in mind', category: 'Web-Designing' },
+    { title: 'Responsive Design', text: 'Creating websites that adapt to different devices', category: 'Web-Designing' }
+];
 
 // Event listener to show the blog page when the "Write Blog" button is clicked
 writeBlogBtn.addEventListener("click", (e) => {

@@ -62,7 +62,7 @@ ul li a{
     align-items: flex-start;
     margin-bottom: 30px;
     box-shadow: 0 0 10px royalblue;
-    width: 40%;
+    width: 80%;
     margin: 30px 40px;
     padding: 30px 20px;
     border-radius: 10px;
@@ -104,7 +104,7 @@ textarea{
 textarea,input{
     outline: none;
     border: none;
-    box-shadow:  0 0 3px royalblue;
+    box-shadow:  0 0 3px rgb(175, 176, 177);
 }
 
 textarea::placeholder,
@@ -123,7 +123,8 @@ input::placeholder{
     z-index: 11;
     /* padding-top: 80px; */
     overflow: auto;
-
+display: flex;
+justify-content: center;
 }
 #blog-page.active{
     left: 0%;
@@ -255,9 +256,12 @@ aside ul li {
     background-color: rgb(86, 127, 248);
     gap: 30px;
     width: 100%;
-    height: 60px;
+    min-height: fit-content;
     color: white;
     margin-top: 50px;
+    flex-wrap: wrap;
+    white-space: nowrap;
+   
 }
 
 #categories-container .filter-item{
@@ -266,7 +270,7 @@ aside ul li {
 
 .blog-card{
     background-color: white;
-    border-radius: 20px;
+    border-radius: 5px;
     width: 30%;
     padding: 25px 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
@@ -301,7 +305,7 @@ aside ul li {
     ul{
         position: absolute;
         top: 50px;
-        background-color: blue;
+        background-color: royalblue;
         right: -100%;
         flex-direction: column;
         justify-content: center;
@@ -319,6 +323,9 @@ aside ul li {
 }
 
 @media (max-width:480px){
+    main{
+        width: 95%;
+    }
     .blog-card{
         width: 100%;
     }

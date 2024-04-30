@@ -44,8 +44,8 @@
 
       <!-- Navigation menu -->
       <ul id="NavMenu">
-        <li><a href="">Blogs</a></li> <!-- Link to the Blogs section -->
-        <li><a id="writeBlogBtn" href="">Write a Blog</a></li> <!-- Link to create a new blog -->
+        <li ><a class="menu-item" href="">Blogs</a></li> <!-- Link to the Blogs section -->
+        <li ><a class="menu-item" id="writeBlogBtn" href="">Write a Blog</a></li> <!-- Link to create a new blog -->
       </ul>
 
       <!-- Menu button for smaller screens (hamburger icon) -->
@@ -58,9 +58,10 @@
     <!-- Blog creation form -->
     <div id="blog-page">
       <form action="" class="form"> <!-- Form to create a new blog -->
-        <input type="text" id="title" placeholder="title" /> <!-- Blog title input -->
+        <input type="text" id="title" placeholder="Blog Title Here" /> <!-- Blog title input -->
 
         <!-- Dropdown for selecting blog category -->
+        <label for="blog-input-categories" >Select Category below</label>
         <select name="" id="blog-input-categories">
           <option value="Web-Development">Web Development</option>
           <option value="Graphic-Designing">Graphic Designing</option>
@@ -77,7 +78,7 @@
           id="text"
           cols="30"
           rows="10"
-          placeholder="Write Something Here"
+          placeholder="Blog Text Here"
         ></textarea>
 
         <!-- Button to post the blog -->
