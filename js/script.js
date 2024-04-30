@@ -26,6 +26,7 @@ postBtn.addEventListener("click", (e) => {
     savArrayDataToLocalStorage(); // Save the updated PostsArray to local storage
     postText.value = ""; // Clear the post text field
     PostTitle.value = ""; // Clear the post title field
+    alert("blog Posted Successfully")
 });
 
 // Function to save the PostsArray to local storage

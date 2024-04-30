@@ -1,70 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- google fonts poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/cateogry-/container.css"> -->
-    <!-- <link rel="stylesheet" href="css/blog-card.css"> -->
-   
-</head>
-<body>
+  <head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Page title -->
+    <title>Js Practice</title>
+
+    <!-- Google Fonts: preconnect and load the 'Poppins' font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS for styling and layout -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar section -->
     <nav class="navbar">
-        <div class="logo">BlogDistrict</div>
-        <ul>
-            <li><a href="">Blogs</a></li>
-            <li ><a id="writeBlogBtn" href="">Write a Blog</a></li>
-        </ul>
+      <!-- Logo area -->
+      <div class="logo">BlogDistrict</div>
+
+      <!-- Navigation menu -->
+      <ul id="NavMenu">
+        <li><a href="">Blogs</a></li> <!-- Link to the Blogs section -->
+        <li><a id="writeBlogBtn" href="">Write a Blog</a></li> <!-- Link to create a new blog -->
+      </ul>
+
+      <!-- Menu button for smaller screens (hamburger icon) -->
+      <i class="fa-solid fa-bars" id="menu-btn"></i>
     </nav>
 
+    <!-- Container for blog categories -->
+    <div id="categories-container"></div>
 
-    <div id="categories-container">
- 
-
-    </div>
-
-    <!-- <div class="blog-posts"></div> -->
-    
+    <!-- Blog creation form -->
     <div id="blog-page">
-    <form action="" class="form">
+      <form action="" class="form"> <!-- Form to create a new blog -->
+        <input type="text" id="title" placeholder="title" /> <!-- Blog title input -->
 
-        <!-- <input type="text" id="name" placeholder="name"> -->
-        <input type="text" id="title" placeholder="title">
-
-        <select name=""  id="blog-input-categories">
-            <!-- <option value="All">None</option> -->
-            <option value="Web-Development">Web Development</option>
-            <option value="Graphic-Designing">Graphic Designing</option>
-            <option value="Social-Media-Marketing">Social Media Marketing</option>
-            <option value="Content-Writing">Content Writing</option>
-            <option value="Software-Engineering">Software Engineering</option>
-            <option value="Web-Designing">Web Designing</option>
-            <option value="AI">AI</option>
+        <!-- Dropdown for selecting blog category -->
+        <select name="" id="blog-input-categories">
+          <option value="Web-Development">Web Development</option>
+          <option value="Graphic-Designing">Graphic Designing</option>
+          <option value="Social-Media-Marketing">Social Media Marketing</option>
+          <option value="Content-Writing">Content Writing</option>
+          <option value="Software-Engineering">Software Engineering</option>
+          <option value="Web-Designing">Web Designing</option>
+          <option value="AI">AI</option>
         </select>
-        <textarea name="text" id="text" cols="30" rows="10" placeholder="Write Something Here"></textarea>
 
+        <!-- Textarea for blog content -->
+        <textarea
+          name="text"
+          id="text"
+          cols="30"
+          rows="10"
+          placeholder="Write Something Here"
+        ></textarea>
+
+        <!-- Button to post the blog -->
         <button id="post-btn">post</button>
-    </form>
-</div>
-
-
-  <main>
-    <div class="blogs-container d-flex" id="blogs-container">
-      <h1>first create some blogs by clicking on the write blog button</h1>
+      </form>
     </div>
-   
-</main>
-    
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
-  
-</body>
+    <!-- Main content section -->
+    <main>
+      <!-- Container for displaying created blogs -->
+      <div class="blogs-container d-flex" id="blogs-container">
+        <h1>first create some blogs by clicking on the write blog button</h1> <!-- Message when there are no blogs -->
+      </div>
+    </main>
+
+    <!-- Bootstrap JS for interactivity -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom JavaScript files -->
+    <script src="js/script.js"></script> <!-- Main script -->
+    <script src="js/navbar.js"></script> <!-- Script for the navbar functionality -->
+  </body>
 </html>
