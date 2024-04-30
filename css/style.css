@@ -1,196 +1,325 @@
-/* Resetting default margins and paddings, and setting box-sizing to border-box for all elements */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif; /* Setting a consistent font across the site */
+    font-family: "Poppins", sans-serif;
 }
-
-/* Background color for the body */
-body {
+body{
     background-color: rgb(230, 224, 224);
 }
 
-/* Navbar styling */
-.navbar {
-    width: 100%; /* Full width */
-    height: 50px; /* Fixed height */
-    background-color: royalblue; /* Navbar background color */
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    background-color: royalblue;
     display: flex;
-    justify-content: space-between; /* Align elements to the ends */
-    align-items: center; /* Vertically center elements */
-    padding: 0 30px; /* Horizontal padding */
-    position: fixed; /* Fixed at the top of the viewport */
-    top: 0; /* Top position */
-    left: 0; /* Left position */
-    z-index: 999; /* Ensure it's on top */
+    justify-content: space-between;
+    align-items: center;
+    padding:0 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
 }
 
-/* Logo styling in the navbar */
-.logo {
-    font-size: 30px; /* Larger font size for the logo */
-    color: white; /* White color */
-    font-weight: bold; /* Bold font */
+.logo{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+ul{
+    display: flex;
+    margin-bottom: 0;
 }
 
-/* Navigation menu (list) styling */
-ul {
-    display: flex; /* Horizontal layout */
-    margin-bottom: 0; /* Remove margin */
+ul li{
+    list-style-type: none;
+    margin: 0 20px;
+    font-size: 18px;
+    
 }
 
-/* List items in the navigation menu */
-ul li {
-    list-style-type: none; /* No bullet points */
-    margin: 0 20px; /* Horizontal spacing */
-    font-size: 18px; /* Font size */
+ul li a{
+    color: white;
+    text-decoration: none;
+    /* font-weight: bold; */
+    font-weight:400;
 }
 
-/* Links inside the navigation menu */
-ul li a {
-    color: white; /* White text */
-    text-decoration: none; /* No underline */
-    font-weight: 400; /* Normal font weight */
+
+#menu-btn{
+    color: white;
+    font-size: 25px;
+    display: none;
 }
 
-/* Hamburger menu button (hidden by default, shown in smaller screens) */
-#menu-btn {
-    color: white; /* White color */
-    font-size: 25px; /* Font size */
-    display: none; /* Hidden initially */
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px royalblue;
+    width: 40%;
+    margin: 30px 40px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color: white;
+    gap: 30px;
 }
 
-/* Form styling for the blog creation */
-.form {
-    display: flex; /* Flex layout */
-    flex-direction: column; /* Vertical stacking */
-    justify-content: center; /* Center vertically */
-    align-items: flex-start; /* Align to the left */
-    box-shadow: 0 0 10px royalblue; /* Box shadow for visual depth */
-    width: 40%; /* Fixed width */
-    padding: 30px 20px; /* Padding */
-    border-radius: 10px; /* Rounded corners */
-    background-color: white; /* White background */
-    gap: 30px; /* Space between elements */
+.form input{
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 5px 15px;
+    font-size: 18px;
+    width: 40%;
 }
 
-/* Form input fields */
-.form input {
-    padding: 5px 15px; /* Padding */
-    font-size: 18px; /* Font size */
-    width: 40%; /* Width */
+button{
+    font-size: 25px;
+    background-color: royalblue;
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: white; 
+    font-weight: bold;
+    /* margin: 20px 0; */
+    text-transform: uppercase;
+    border: none;
+    outline: none;     
+}
+textarea{
+    /* margin: 10px; */
+    font-size: 17px;
+   
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    resize: none;
+   
 }
 
-/* Button styling for form submission */
-button {
-    font-size: 25px; /* Font size */
-    background-color: royalblue; /* Background color */
-    border-radius: 3px; /* Slightly rounded corners */
-    padding: 10px 30px; /* Padding */
-    color: white; /* White text */
-    font-weight: bold; /* Bold font */
-    text-transform: uppercase; /* Uppercase text */
-    border: none; /* No border */
-    outline: none; /* No outline */
+textarea,input{
+    outline: none;
+    border: none;
+    box-shadow:  0 0 3px royalblue;
 }
 
-/* Textarea styling */
-textarea {
-    font-size: 17px; /* Font size */
-    padding: 10px; /* Padding */
-    resize: none; /* Disable resizing */
-    outline: none; /* No outline */
-    border: none; /* No border */
-    box-shadow: 0 0 3px royalblue; /* Box shadow */
-}
-
-/* Placeholder text color for inputs and textareas */
 textarea::placeholder,
-input::placeholder {
-    color: rgb(194, 190, 190); /* Light grey color */
+input::placeholder{
+    color: rgb(194, 190, 190);
 }
 
-/* Blog page styling */
-#blog-page {
-    width: 100%; /* Full width */
-    height: calc(100% - 50px); /* Full height minus navbar height */
-    position: absolute; /* Positioned absolutely */
-    top: 50px; /* Below navbar */
-    left: -100%; /* Offscreen initially */
-    background-color: rgb(250, 243, 243); /* Light background color */
-    transition: 0.5s ease; /* Smooth transition */
-    z-index: 11; /* Above other elements */
+#blog-page{
+    width: 100%;
+    height: calc(100% - 50px);
+    position: absolute;
+    top: 50px;
+    left: -100%;
+    background-color: rgb(250, 243, 243);
+    transition: 0.5s ease;
+    z-index: 11;
+    /* padding-top: 80px; */
+    overflow: auto;
+
+}
+#blog-page.active{
+    left: 0%;
+    position: fixed;
+    
+}
+main{
+    display: flex;
+    width: 80%;
+    margin: 50px auto 30px auto;
+    gap: 30px;
+    
+}
+main aside{
+    width: 30%;
+    background-color: royalblue;
+    /* border-radius: 10px; */
+    padding: 20px 0;
+    max-height: 80vh;
+    /* margin-top: 50px; */
+}
+aside ul{
+    display: flex;
+    flex-direction: column;
 }
 
-/* Blog page active state (when visible) */
-#blog-page.active {
-    left: 0%; /* Shift to visible position */
-    position: fixed; /* Fixed position */
+aside ul li {
+    border-bottom: 1px solid rgb(37, 114, 158);
+    padding:10px 0 ;
 }
 
-/* Main content section */
-main {
-    display: flex; /* Flex layout */
-    width: 80%; /* 80% of viewport */
-    margin: 50px auto 30px auto; /* Center with top and bottom margins */
-    gap: 30px; /* Spacing between elements */
-}
 
-/* Aside (sidebar) within main section */
-main aside {
-    width: 30%; /* Width of sidebar */
-    background-color: royalblue; /* Background color */
-    padding: 20px 0; /* Padding */
-    max-height: 80vh; /* Maximum height */
-}
-
-/* Container for blogs */
-.container {
-    width: 70%; /* 70% width */
-    background-color: white; /* White background */
-    padding: 20px; /* Padding */
-    display: flex; /* Flex layout */
-    flex-direction: column; /* Vertical stacking */
-}
-
-/* Blog card styling */
-.blog-card {
-    background-color: white; /* White background */
-    border-radius: 20px; /* Rounded corners */
-    padding: 25px 20px; /* Padding */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.24); /* Soft shadow */
-}
-
-/* Media query for smaller screens (maximum width 768px) */
-@media (max-width: 768px) {
-    .blog-card {
-        width: 45%; /* Smaller width for blog cards */
+.container{
+    width: 70%;
+    background-color: white;
+    /* border-radius: 10px; */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
     }
-    #menu-btn {
-        display: block; /* Show the menu button */
+
+.container div{
+    /* box-shadow: 0 0 8px rgba(0, 0, 0, 0 */
+    padding: 10px 15px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 200px;
+    border-radius: 10px;
+    border-bottom: 1px solid rgb(218, 213, 213);
+    position: relative;
+
+}
+
+
+
+.container div span{
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgb(124, 122, 122);
+}
+
+.container div h3{
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: rgb(46, 45, 45);
+}
+
+.container div p{
+    font-size: 18px;
+    color: rgb(121, 118, 118);
+    /* font-weight: bold; */
+}
+
+.container div h4{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    color: rgb(124, 122, 122);
+}
+
+.input-categories{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.input-cate{
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #faebd7;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.input-cate.active{
+    background-color: green;
+    color: white;
+}
+
+.blogs-container{
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.blogs-container .card{
+    min-width: 100%;
+}
+
+.filter-selected{
+    background-color: white;
+}
+
+#categories-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(86, 127, 248);
+    gap: 30px;
+    width: 100%;
+    height: 60px;
+    color: white;
+    margin-top: 50px;
+}
+
+#categories-container .filter-item{
+    cursor: pointer;
+}
+
+.blog-card{
+    background-color: white;
+    border-radius: 20px;
+    width: 30%;
+    padding: 25px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.24);
+    word-wrap: break-word;
+    position: relative;
+
+}
+
+.blog-card p{
+    color: rgb(121, 118, 118);
+    font-weight: 400;
+}
+
+.blog-card h5{
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    background-color: rgb(110, 143, 245);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+@media (max-width:768px){
+    .blog-card{
+        width: 45%;
     }
-    ul {
-        position: absolute; /* Position the navbar absolutely */
-        top: 50px; /* Below navbar */
-        background-color: blue; /* Blue background */
-        right: -100%; /* Initially off-screen */
-        flex-direction: column; /* Stack menu items vertically */
-        justify-content: center; /* Center elements */
-        align-items: center; /* Center horizontally */
-        gap: 50px; /* Spacing between items */
-        padding: 30px 0; /* Padding */
-        width: 50%; /* 50% of screen */
-        height: 100vh; /* Full viewport height */
-        transition: 0.3s ease; /* Smooth transition */
+    #menu-btn{
+        display: block;
     }
-    ul.active {
-        right: 0; /* Bring into view when active */
+    ul{
+        position: absolute;
+        top: 50px;
+        background-color: blue;
+        right: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        padding: 30px 0;
+        width: 50%;
+        height: 100vh;
+        transition: 0.3s ease;
+    }
+
+    ul.active{
+        right: 0;
     }
 }
 
-/* Media query for even smaller screens (maximum width 480px) */
-@media (max-width: 480px) {
-    .blog-card {
-        width: 100%; /* Full width */
+@media (max-width:480px){
+    .blog-card{
+        width: 100%;
     }
 }
