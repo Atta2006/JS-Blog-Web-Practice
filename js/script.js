@@ -53,14 +53,21 @@ writeBlogBtn.addEventListener("click", (e) => {
 // Event listener for the "Post" button to add a new blog post
 postBtn.addEventListener("click", (e) => {
     e.preventDefault(); // Prevent default behavior to avoid page reload
-    let selectedPostCategory = postSelectCategory.options[postSelectCategory.selectedIndex].value; // Get the selected category
-    let newObject = { title: PostTitle.value, text: postText.value, category: selectedPostCategory }; // Create a new post object
-    PostsArray.push(newObject); // Add the new post to the PostsArray
+    if (PostTitle.value === "") {
+        alert("fill the blog title filed")
+    } else if(postText.value === ""){
+        alert("fill the blog description field")
+    }else {
+        let selectedPostCategory = postSelectCategory.options[postSelectCategory.selectedIndex].value; // Get the selected category
+        let newObject = { title: PostTitle.value, text: postText.value, category: selectedPostCategory }; // Create a new post object
+        PostsArray.unshift(newObject); // Add the new post to the PostsArray
+        alert("blog posted successfully")
+        console.log(PostsArray)
 
-    savArrayDataToLocalStorage(); // Save the updated PostsArray to local storage
-    postText.value = ""; // Clear the post text field
-    PostTitle.value = ""; // Clear the post title field
-    alert("blog Posted Successfully")
+        savArrayDataToLocalStorage(); // Save the updated PostsArray to local storage
+        postText.value = ""; // Clear the post text field
+        PostTitle.value = ""; // Clear the post title field
+    }
 });
 
 // Function to save the PostsArray to local storage
