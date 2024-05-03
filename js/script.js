@@ -62,7 +62,7 @@ postBtn.addEventListener("click", (e) => {
         let newObject = { title: PostTitle.value, text: postText.value, category: selectedPostCategory }; // Create a new post object
         PostsArray.unshift(newObject); // Add the new post to the PostsArray
         alert("blog posted successfully")
-        console.log(PostsArray)
+        
 
         savArrayDataToLocalStorage(); // Save the updated PostsArray to local storage
         postText.value = ""; // Clear the post text field
