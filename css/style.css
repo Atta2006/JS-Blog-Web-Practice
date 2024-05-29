@@ -61,7 +61,6 @@ ul li a{
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 30px;
-    /* box-shadow: 0 0 10px royalblue; */
     width: 80%;
     margin: 30px 40px;
     padding: 30px 20px;
@@ -71,11 +70,11 @@ ul li a{
 }
 
 .form input{
-    width: 30%;
+    width: 70%;
     margin-bottom: 20px;
     padding: 5px 15px;
     font-size: 18px;
-    width: 40%;
+    
 }
 
 button{
@@ -319,6 +318,11 @@ aside ul li {
 
     ul.active{
         right: 0;
+    }
+
+    .form input {
+      
+        width: 100%;
     }
 }
 
